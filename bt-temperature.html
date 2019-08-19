@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    function myTemperature(doc, dof, kenvin) {
+        this.doc = doc;
+        this.dof = dof;
+        this.kenvin = kenvin;
+        this.getDoc = function () {
+            return this.doc
+        };
+        this.getDof = function () {
+            return this.dof
+        };
+        this.getKenvin = function () {
+            return this.kenvin
+        }; this.getCSF = function () {
+            return (doc + 32) * 1.8;
+        };
+        this.getCSK = function () {
+          return doc + 273  ;
+        };
+        this.setDoc= function () {
+            this.doc = doc;
+        };
+        this.setDof = function () {
+            this.dof = dof
+        };
+        this.kenvin = function () {
+            this.kenvin = kenvin;
+        };
+    }
+    let temperature = new myTemperature(25);
+    let result = temperature.getCSF();
+    let result1 = temperature.getCSK();
+    document.write("C sang F: " + result + "<br>");
+    document.write("C sang K: " + result1);
+</script>
+</body>
+</html>
